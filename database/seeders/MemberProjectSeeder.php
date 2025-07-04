@@ -66,7 +66,7 @@ class MemberProjectSeeder extends Seeder
             'long_description' => 'Permite aos visitantes acessar informações sobre exposições com realidade aumentada.',
             'category' => 'Educação',
             'tags' => ['AR', 'Museu', 'Guia Interativo'],
-            'image_url' => 'https://via.placeholder.com/400x300.png?text=AR+Museum',
+            'image_url' => 'http://localhost:8000/storage/projects/Wallpaper_B.png',
             'demo_url' => null,
             'github_url' => 'https://github.com/usuario/ar-guide',
             'status' => 'completed',
@@ -77,6 +77,42 @@ class MemberProjectSeeder extends Seeder
             'challenges' => ['Reconhecimento offline', 'Usabilidade em diferentes luzes'],
             'outcomes' => ['Projeto premiado', 'Parceria com museu local'],
         ]);
+        $project3 = Project::create([
+            'title' => 'VR Health Monitor',
+            'description' => 'Projeto de monitoramento de saúde em realidade virtual.',
+            'long_description' => 'Este projeto combina sensores biométricos com experiências VR imersivas para acompanhar sinais vitais em tempo real.',
+            'category' => 'HealthTech',
+            'tags' => ['VR', 'Saúde', 'Wearables'],
+            'image_url' => 'http://localhost:8000/storage/projects/Wallpaper_B.png',
+            'demo_url' => 'https://example.com/demo1',
+            'github_url' => 'https://github.com/usuario/vr-health',
+            'status' => 'in-progress',
+            'start_date' => '2024-10-01',
+            'completion_date' => null,
+            'technologies' => ['Unity', 'C#', 'Firebase'],
+            'features' => ['Leitura de batimentos', 'Ambiente VR interativo'],
+            'challenges' => ['Sincronização em tempo real', 'Latência de sensores'],
+            'outcomes' => ['Validação com usuários reais', 'Publicação em conferência'],
+        ]);
+
+        $project4 = Project::create([
+            'title' => 'AR Guide for Museums',
+            'description' => 'Aplicativo de realidade aumentada para tours em museus.',
+            'long_description' => 'Permite aos visitantes acessar informações sobre exposições com realidade aumentada.',
+            'category' => 'Educação',
+            'tags' => ['AR', 'Museu', 'Guia Interativo'],
+            'image_url' => 'http://localhost:8000/storage/projects/Wallpaper_B.png',
+            'demo_url' => null,
+            'github_url' => 'https://github.com/usuario/ar-guide',
+            'status' => 'completed',
+            'start_date' => '2023-05-15',
+            'completion_date' => '2023-12-20',
+            'technologies' => ['React Native', 'ARCore', 'Laravel'],
+            'features' => ['Reconhecimento de imagem', 'Narrativas interativas'],
+            'challenges' => ['Reconhecimento offline', 'Usabilidade em diferentes luzes'],
+            'outcomes' => ['Projeto premiado', 'Parceria com museu local'],
+        ]);
+
 
         // Relacionamentos many-to-many
         $member1->projects()->attach([$project1->id, $project2->id]);
